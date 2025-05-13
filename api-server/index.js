@@ -24,7 +24,7 @@ const ecsClient = new ECSClient({
     region: '',
     credentials: {
         accessKeyId: '',
-        secretAccessKey: ''
+        secretAccessKey: '' //IAM from AWS
     }
 })
 
@@ -48,8 +48,8 @@ app.post('/project', async (req, res) => {
         networkConfiguration: {
             awsvpcConfiguration: {
                 assignPublicIp: 'ENABLED',
-                subnets: ['', '', ''],
-                securityGroups: ['']
+                subnets: ['', '', ''], //From Subnets part of ECS
+                securityGroups: ['']// AGain from docs
             }
         },
         overrides: {

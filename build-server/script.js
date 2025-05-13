@@ -72,3 +72,5 @@ async function init() {
 }
 
 init()
+
+//Publish log is a part of Redis straming of logs
